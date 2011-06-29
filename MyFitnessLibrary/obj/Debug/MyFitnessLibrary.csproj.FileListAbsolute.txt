@@ -1,0 +1,5 @@
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessLibrary\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessLibrary\bin\Debug\MyFitnessLibrary.dll
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessLibrary\bin\Debug\MyFitnessLibrary.pdb
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessLibrary\obj\Debug\MyFitnessLibrary.dll
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessLibrary\obj\Debug\MyFitnessLibrary.pdb

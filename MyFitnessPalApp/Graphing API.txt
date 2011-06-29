@@ -1,0 +1,1 @@
+http://chart.apis.google.com/chart?chxt=y,x&chbh=a&chs=300x225&cht=bvs&chco=A2C180,3D7930&chtt=Vertical+bar+chart&chds=0,3000,0,3000&chxr=0,0,3000&chd=t:1468.15,2989.36,1364|216,0,350

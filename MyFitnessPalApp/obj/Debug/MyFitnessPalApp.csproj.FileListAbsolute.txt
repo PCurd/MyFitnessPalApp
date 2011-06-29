@@ -1,0 +1,10 @@
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\bin\Debug\MyFitnessPalApp.exe
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\bin\Debug\MyFitnessPalApp.pdb
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\MyFitnessPalApp.Properties.Resources.resources
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\MyFitnessPalApp.csproj.GenerateResource.Cache
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\MyFitnessPalApp.exe
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\MyFitnessPalApp.pdb
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\obj\Debug\MyFitnessPalApp.Form1.resources
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\bin\Debug\MyFitnessLibrary.dll
+C:\Users\Peter\Documents\Visual Studio 2008\Projects\MyFitnessPalApp\MyFitnessPalApp\bin\Debug\MyFitnessLibrary.pdb

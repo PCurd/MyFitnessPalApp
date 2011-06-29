@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFitnessPalApp", "MyFitnessPalApp\MyFitnessPalApp.csproj", "{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFitnessLibrary", "MyFitnessLibrary\MyFitnessLibrary.csproj", "{8CF793C7-3806-4341-B12E-C85A7DD2D315}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF793C7-3806-4341-B12E-C85A7DD2D315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF793C7-3806-4341-B12E-C85A7DD2D315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF793C7-3806-4341-B12E-C85A7DD2D315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF793C7-3806-4341-B12E-C85A7DD2D315}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
