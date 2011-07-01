@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MyFitnessPalApp">
+</Property><Property Name="Solution File" Value="C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\MyFitnessPalApp.sln">
+</Property><Property Name="User Options File" Value="C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\MyFitnessPalApp.suo">
+</Property><Property Name="Date" Value="01 July 2011">
+</Property><Property Name="Time" Value="18:21">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MyFitnessPalApp.sln" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp.sln">
+</Event><Event ErrorLevel="0" Project="" Source="MyFitnessPalApp.suo" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp.suo">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\MyFitnessPalApp.csproj" Description="Project file successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\MyFitnessPalApp.csproj">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\MyFitnessPalApp.csproj.user" Description="Project user file successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\MyFitnessPalApp.csproj.user">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Form1.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Form1.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Form1.Designer.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Program.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Program.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Properties\Resources.Designer.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Properties\Settings.Designer.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Properties\Settings.settings" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Graphing API.txt" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Graphing API.txt">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Form1.resx" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Form1.resx">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\Properties\Resources.resx" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessPalApp\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\MyFitnessPalApp.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MyFitnessPalApp" Source="MyFitnessPalApp\MyFitnessPalApp.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\MyFitnessLibrary.csproj" Description="Project file successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\MyFitnessLibrary.csproj">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Fitness\MyFitnessStatType.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Fitness\MyFitnessStatType.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Network\Login.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Network\Login.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Fitness\MyFitness.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Fitness\MyFitness.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Fitness\MyFitnessList.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Fitness\MyFitnessList.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Network\MyFitnessURL.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Network\MyFitnessURL.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\XML\MyFitnessXML.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\XML\MyFitnessXML.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\Properties\AssemblyInfo.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\XML\XMLMyFitnessLoader.cs" Description="File successfully backed up as C:\apps\portableapps\PortableGit\home\peter\MyFitnessPalApp\Backup\MyFitnessLibrary\XML\XMLMyFitnessLoader.cs">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\MyFitnessLibrary.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MyFitnessLibrary" Source="MyFitnessLibrary\MyFitnessLibrary.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="MyFitnessPalApp.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MyFitnessPalApp.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MyFitnessPalApp" Source="MyFitnessPalApp\MyFitnessPalApp.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="MyFitnessLibrary" Source="MyFitnessLibrary\MyFitnessLibrary.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
