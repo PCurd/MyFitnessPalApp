@@ -76,6 +76,8 @@
     <Compile Include="XML\LoadConfig.cs" />
     <Compile Include="XML\MyFitnessXML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XML\XMLMyFitnessExporter.cs" />
+    <Compile Include="XML\XMLMyFitnessImporter.cs" />
     <Compile Include="XML\XMLMyFitnessLoader.cs" />
   </ItemGroup>
   <ItemGroup>

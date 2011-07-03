@@ -9,19 +9,19 @@ using MyFitnessLibrary.Fitness;
 
 namespace MyFitnessLibrary.XML
 {
-   
+
     public class XMLMyFitnessLoader
     {
         Login _login;
 
         public XMLMyFitnessLoader(Login login)
         {
-            _login=login;
+            _login = login;
         }
 
         private XDocument GetXML(MyFitnessStatType MyFitnessStat, int NumberOfDays)
         {
-            string URL = MyFitnessURL.FormatURL(MyFitnessStat,NumberOfDays);
+            string URL = MyFitnessURL.FormatURL(MyFitnessStat, NumberOfDays);
             return GetXML(URL);
         }
 
@@ -32,12 +32,12 @@ namespace MyFitnessLibrary.XML
             string ReadPage = _login.ReadPage(URL);
 
             return XDocument.Parse(ReadPage);
-            
+
         }
 
         public List<MyFitnessXML> GetValues(XDocument xDoc)
         {
-           
+
             var Chart_DataL = from c in xDoc.Elements("chart").Elements("chart_data").Elements("row")
                               select c;
 
@@ -49,7 +49,7 @@ namespace MyFitnessLibrary.XML
                                     where c.Element("number") != null
                                     select c.Elements("number");
 
-             List<MyFitnessXML> XMLList = new List<MyFitnessXML>();
+            List<MyFitnessXML> XMLList = new List<MyFitnessXML>();
 
             //Start at 1 to avoid first record is 0 bug
             for (int i = 1; i < Chart_DataStrings.ElementAt(0).Count(); i++)
@@ -79,7 +79,7 @@ namespace MyFitnessLibrary.XML
             }
             //GetXML based on the stat type
             //get one more day due to the zero first record bug
-            var XML = GetXML(MyFitnessStat, NumberOfDays+1);
+            var XML = GetXML(MyFitnessStat, NumberOfDays + 1);
             //Get values from xml
             var ListXML = GetValues(XML);
             //assign to collection
@@ -102,11 +102,11 @@ namespace MyFitnessLibrary.XML
             }
         }
 
-        
-
-       
 
 
-        
+
+
+
+
     }
 }

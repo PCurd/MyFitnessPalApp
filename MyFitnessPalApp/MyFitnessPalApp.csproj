@@ -109,6 +109,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ConfigFile.xml" />
     <Content Include="Graphing API.txt" />
   </ItemGroup>
   <ItemGroup>

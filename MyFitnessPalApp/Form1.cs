@@ -15,7 +15,7 @@ namespace MyFitnessPalApp
 {
     public partial class Form1 : Form
     {
-        private LoginDetails loginDetails;// = new LoginDetails("****", "****");
+        private LoginDetails loginDetails;
         private Login login;
         LoadConfig config = new LoadConfig(@"ConfigFile.xml");
 
@@ -64,6 +64,7 @@ namespace MyFitnessPalApp
         }
 
 
+        //**TODO Should be in library
         void CreateSomeXMLFitnesses()
         {
             XMLMyFitnessLoader loader = new XMLMyFitnessLoader(login);
@@ -79,14 +80,9 @@ namespace MyFitnessPalApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (TextWriter tw = File.CreateText("xmlout.xml"))
-            {
-                textBox2.Text = "XML Serialisation Starting";
-                System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(MyFitnessList));
-                x.Serialize(tw, MyFitnesses);
-                
-            }
-
+            XMLMyFitnessExporter xmlMyFitnessExporter = new XMLMyFitnessExporter(MyFitnesses,"xmlout.xml");
+            textBox2.Text = "XML Serialisation Starting";
+            xmlMyFitnessExporter.Serialize();
         }
 
         private void btnUpdateValues_Click(object sender, EventArgs e)
@@ -101,13 +97,11 @@ namespace MyFitnessPalApp
 
         private void btnDeSerialize_Click(object sender, EventArgs e)
         {
-            using (TextReader tr = File.OpenText("xmlout.xml"))
-            {
-                textBox2.Text = "XML DeSerialisation Starting";
-                System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(MyFitnessList));
-                MyFitnesses=(MyFitnessList)x.Deserialize(tr);
+            XMLMyFitnessImporter xmlMyFitnessImporter = new XMLMyFitnessImporter(ref MyFitnesses, "xmlout.xml");
 
-            }
+            textBox2.Text = "XML DeSerialisation Starting";
+
+            MyFitnesses = xmlMyFitnessImporter.DeSerialize();
         }
     }
 }
