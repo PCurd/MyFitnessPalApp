@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFitnessPalApp", "MyFitnessPalApp\MyFitnessPalApp.csproj", "{3AE2E1F7-9CBF-40B0-9814-174D4E9B02B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFitnessLibrary", "MyFitnessLibrary\MyFitnessLibrary.csproj", "{8CF793C7-3806-4341-B12E-C85A7DD2D315}"
@@ -24,6 +24,3 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal
-
-
-#

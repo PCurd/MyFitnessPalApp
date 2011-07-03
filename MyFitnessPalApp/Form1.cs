@@ -15,11 +15,17 @@ namespace MyFitnessPalApp
 {
     public partial class Form1 : Form
     {
+        private LoginDetails loginDetails;// = new LoginDetails("****", "****");
+        private Login login;
+        LoadConfig config = new LoadConfig(@"ConfigFile.xml");
+
         MyFitnessList MyFitnesses;
 
         public Form1()
         {
             InitializeComponent();
+            loginDetails = (LoginDetails)config.GetContents(typeof(LoginDetails));
+            login = new Login(loginDetails);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -60,7 +66,7 @@ namespace MyFitnessPalApp
 
         void CreateSomeXMLFitnesses()
         {
-            XMLMyFitnessLoader loader = new XMLMyFitnessLoader(new Login("****", "****"));
+            XMLMyFitnessLoader loader = new XMLMyFitnessLoader(login);
 
             int Days = 14;
 

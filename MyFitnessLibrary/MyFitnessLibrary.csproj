@@ -71,7 +71,9 @@
     <Compile Include="Network\Login.cs" />
     <Compile Include="Fitness\MyFitness.cs" />
     <Compile Include="Fitness\MyFitnessList.cs" />
+    <Compile Include="Network\LoginDetails.cs" />
     <Compile Include="Network\MyFitnessURL.cs" />
+    <Compile Include="XML\LoadConfig.cs" />
     <Compile Include="XML\MyFitnessXML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XML\XMLMyFitnessLoader.cs" />

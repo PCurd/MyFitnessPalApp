@@ -13,7 +13,17 @@ namespace MyFitnessLibrary.Network
         HttpWebResponse response;
         CookieContainer cookies;
 
+        public Login(LoginDetails Details)
+        {
+            RunLogin(Details.Username, Details.Password);
+        }
+
         public Login(string Username, string Password)
+        {
+            RunLogin(Username,Password);
+        }
+
+        public void RunLogin(string Username, string Password)
         {
             string url = string.Format("http://www.myfitnesspal.com/account/login");
             request = (HttpWebRequest)WebRequest.Create(url);
