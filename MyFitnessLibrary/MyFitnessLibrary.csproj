@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fitness\MyFitnessPalWrapper.cs" />
     <Compile Include="Fitness\MyFitnessStatType.cs" />
     <Compile Include="Network\Login.cs" />
     <Compile Include="Fitness\MyFitness.cs" />

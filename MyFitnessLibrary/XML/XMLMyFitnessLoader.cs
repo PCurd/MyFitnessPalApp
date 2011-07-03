@@ -27,8 +27,6 @@ namespace MyFitnessLibrary.XML
 
         private XDocument GetXML(string URL)
         {
-
-            StringBuilder builder = new StringBuilder();
             string ReadPage = _login.ReadPage(URL);
 
             return XDocument.Parse(ReadPage);
@@ -103,10 +101,13 @@ namespace MyFitnessLibrary.XML
         }
 
 
-
-
-
-
+        public void LoadValues(int Days, ref MyFitnessList myFitnesses)
+        {
+            foreach (var MyFitnessStat in Enum.GetValues(typeof(MyFitnessStatType)).Cast<MyFitnessStatType>())
+            {
+                GetValue(MyFitnessStat, myFitnesses.Values, Days);
+            }
+        }
 
     }
 }

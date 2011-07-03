@@ -15,46 +15,33 @@ namespace MyFitnessPalApp
 {
     public partial class Form1 : Form
     {
-        private LoginDetails loginDetails;
-        private Login login;
-        LoadConfig config = new LoadConfig(@"ConfigFile.xml");
+        private string XMLOutFile = @"xmlout.xml";
 
-        MyFitnessList MyFitnesses;
+        private MyFitnessPalWrapper MyFitness;
 
         public Form1()
         {
             InitializeComponent();
-            loginDetails = (LoginDetails)config.GetContents(typeof(LoginDetails));
-            login = new Login(loginDetails);
+
+            MyFitness = new MyFitnessPalWrapper(@"ConfigFile.xml", 14);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             UpdateForm();
-
-         }
+        }
 
         private void DoUpdate()
         {
-            if (MyFitnesses==null)
-                MyFitnesses = new MyFitnessList();
-            CreateSomeXMLFitnesses();
-
-
+            MyFitness.LoadValues();
             UpdateForm();
-
         }
 
         private void UpdateForm()
         {
             string Output = "";
-            if (MyFitnesses == null)
-            {
-                return;
-            }
 
-            foreach (MyFitness value in MyFitnesses.Values)
+            foreach (MyFitness value in MyFitness.MyFitnesses.Values)
             {
                 string LineItem = value.ToString() + Environment.NewLine;
                 Output += LineItem;
@@ -63,26 +50,10 @@ namespace MyFitnessPalApp
             textBox1.Text = Output;
         }
 
-
-        //**TODO Should be in library
-        void CreateSomeXMLFitnesses()
-        {
-            XMLMyFitnessLoader loader = new XMLMyFitnessLoader(login);
-
-            int Days = 14;
-
-            foreach (var MyFitnessStat in Enum.GetValues(typeof(MyFitnessStatType)).Cast<MyFitnessStatType>())
-            {
-                loader.GetValue(MyFitnessStat, MyFitnesses.Values, Days);
-            }
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            XMLMyFitnessExporter xmlMyFitnessExporter = new XMLMyFitnessExporter(MyFitnesses,"xmlout.xml");
             textBox2.Text = "XML Serialisation Starting";
-            xmlMyFitnessExporter.Serialize();
+            MyFitness.ExportXML(XMLOutFile);
         }
 
         private void btnUpdateValues_Click(object sender, EventArgs e)
@@ -97,11 +68,8 @@ namespace MyFitnessPalApp
 
         private void btnDeSerialize_Click(object sender, EventArgs e)
         {
-            XMLMyFitnessImporter xmlMyFitnessImporter = new XMLMyFitnessImporter(ref MyFitnesses, "xmlout.xml");
-
             textBox2.Text = "XML DeSerialisation Starting";
-
-            MyFitnesses = xmlMyFitnessImporter.DeSerialize();
+            MyFitness.ImportXML(XMLOutFile);
         }
     }
 }

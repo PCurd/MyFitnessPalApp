@@ -21,14 +21,6 @@ namespace MyFitnessLibrary.XML
         public object GetContents( Type ReturnType)
         {
 
-            //using (TextWriter tw = File.CreateText("xmlout.xml"))
-            //{
-            //    textBox2.Text = "XML Serialisation Starting";
-            //    System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(typeof(MyFitnessList));
-            //    x.Serialize(tw, MyFitnesses);
-
-            //}
-
             using (TextReader tr = File.OpenText(ConfigFile))
             {
                 System.Xml.Serialization.XmlSerializer x = new System.Xml.Serialization.XmlSerializer(ReturnType);
