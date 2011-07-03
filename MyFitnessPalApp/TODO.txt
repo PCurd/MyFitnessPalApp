@@ -1,0 +1,3 @@
+﻿Speed up network calls/reflection
+
+Support for graphing
