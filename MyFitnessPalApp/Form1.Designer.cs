@@ -34,6 +34,8 @@
             this.btnUpdateValues = new System.Windows.Forms.Button();
             this.btnShowValues = new System.Windows.Forms.Button();
             this.btnDeSerialize = new System.Windows.Forms.Button();
+            this.PBGraph = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PBGraph)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -92,11 +94,20 @@
             this.btnDeSerialize.UseVisualStyleBackColor = true;
             this.btnDeSerialize.Click += new System.EventHandler(this.btnDeSerialize_Click);
             // 
+            // PBGraph
+            // 
+            this.PBGraph.Location = new System.Drawing.Point(28, 363);
+            this.PBGraph.Name = "PBGraph";
+            this.PBGraph.Size = new System.Drawing.Size(726, 207);
+            this.PBGraph.TabIndex = 6;
+            this.PBGraph.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(779, 582);
+            this.Controls.Add(this.PBGraph);
             this.Controls.Add(this.btnDeSerialize);
             this.Controls.Add(this.btnShowValues);
             this.Controls.Add(this.btnUpdateValues);
@@ -106,6 +117,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PBGraph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Button btnUpdateValues;
         private System.Windows.Forms.Button btnShowValues;
         private System.Windows.Forms.Button btnDeSerialize;
+        private System.Windows.Forms.PictureBox PBGraph;
     }
 }
 

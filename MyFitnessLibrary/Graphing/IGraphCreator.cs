@@ -6,16 +6,20 @@ using System.Drawing;
 
 namespace MyFitnessLibrary.Graphing
 {
-    interface IGraphCreator
+    public interface IGraphCreator
     {
 
-        Image GetImage(IGraphOptions graphOptions)
-        {
-        }
+        Image GetImage(IGraphOptions graphOptions);
+        void CreateChart(GraphType graphType);
     }
 
-    interface IGraphOptions
+    public interface IGraphOptions
     {
 
+    }
+
+    public enum GraphType
+    {
+        Bar, Line, Pie, Venn, Scatter
     }
 }

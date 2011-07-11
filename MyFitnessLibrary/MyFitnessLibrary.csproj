@@ -53,10 +53,15 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GoogleChartSharp, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GoogleChartSharp\GoogleChartSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -69,6 +74,9 @@
   <ItemGroup>
     <Compile Include="Fitness\MyFitnessPalWrapper.cs" />
     <Compile Include="Fitness\MyFitnessStatType.cs" />
+    <Compile Include="Graphing\GoogleChartGraphCreator.cs" />
+    <Compile Include="Graphing\IGraphCreator.cs" />
+    <Compile Include="Graphing\ImageDownloader.cs" />
     <Compile Include="Network\Login.cs" />
     <Compile Include="Fitness\MyFitness.cs" />
     <Compile Include="Fitness\MyFitnessList.cs" />
