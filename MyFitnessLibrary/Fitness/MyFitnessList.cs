@@ -13,5 +13,18 @@ namespace MyFitnessLibrary.Fitness
         {
             Values = new List<MyFitness>();
         }
+
+        public List<MyFitness> LastFortnight
+        {
+            get
+            {
+                return Last(14);
+            }
+        }
+
+        public List<MyFitness> Last(int count)
+        {
+            return Values.Where((x, y) => y > Values.Count - (count + 1)).ToList();
+        }
     }
 }
