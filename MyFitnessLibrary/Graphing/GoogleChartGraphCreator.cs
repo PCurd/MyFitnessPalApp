@@ -19,10 +19,15 @@ namespace MyFitnessLibrary.Graphing
 
         void CreateBarChart()
         {
-            chart = new BarChart(250, 450, BarChartOrientation.Vertical, BarChartStyle.Stacked);
-            chart.SetTitle("Horizontal Stacked");
-            chart.AddAxis(new ChartAxis(ChartAxisType.Bottom));
-            chart.AddAxis(new ChartAxis(ChartAxisType.Left));
+            chart = new BarChart(450, 250, BarChartOrientation.Vertical, BarChartStyle.Stacked);
+            chart.SetTitle("Vertical Stacked");
+            ChartAxis BottomAxis = new ChartAxis(ChartAxisType.Bottom);
+            ChartAxis LeftAxis = new ChartAxis(ChartAxisType.Left);
+
+            //LeftAxis.SetRange(0, datasets[0].Max());
+            LeftAxis.SetRange(0, 4095);
+            chart.AddAxis(BottomAxis);
+            chart.AddAxis(LeftAxis);
             chart.SetData(datasets);
 
             chart.SetDatasetColors(new string[] { "FF0000", "00AA00" });
