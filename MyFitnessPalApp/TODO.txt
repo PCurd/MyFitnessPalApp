@@ -3,3 +3,5 @@
 Support for graphing
 
 Cache cookies
+
+Update graphing to use scaling - need to provide data "out of 4095"
