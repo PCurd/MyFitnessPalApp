@@ -30,22 +30,22 @@ namespace MyFitnessPalApp
             {
                 List<int[]> dataset = new List<int[]>();
 
-                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Net_Calories));
+                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Net_Calories, fitnessList.LastFortnight));
 
-                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories_Burned));
+                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories_Burned, fitnessList.LastFortnight));
 
                 return dataset;
             }
         }
 
-        private int[] GetDataSetByMyFitnessStatType(MyFitnessStatType myFitnessStatType)
+        private int[] GetDataSetByMyFitnessStatType(MyFitnessStatType myFitnessStatType, List<MyFitness> Records)
         {
 
-            int[] tempDataSet = new int[fitnessList.LastFortnight.Count];
+            int[] tempDataSet = new int[Records.Count];
 
-            for (int i = 0; i < fitnessList.LastFortnight.Count; i++)
+            for (int i = 0; i < Records.Count; i++)
             {
-                MyFitness myFitness = fitnessList.LastFortnight[i];
+                MyFitness myFitness = Records[i];
 
                 tempDataSet[i] = (int)myFitness.GetFitnessValue(myFitnessStatType);
             }
