@@ -43,7 +43,7 @@
             this.textBox1.Location = new System.Drawing.Point(28, 32);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(651, 186);
+            this.textBox1.Size = new System.Drawing.Size(618, 186);
             this.textBox1.TabIndex = 0;
             // 
             // button1
@@ -96,9 +96,9 @@
             // 
             // PBGraph
             // 
-            this.PBGraph.Location = new System.Drawing.Point(28, 305);
+            this.PBGraph.Location = new System.Drawing.Point(652, 12);
             this.PBGraph.Name = "PBGraph";
-            this.PBGraph.Size = new System.Drawing.Size(450, 250);
+            this.PBGraph.Size = new System.Drawing.Size(500, 600);
             this.PBGraph.TabIndex = 6;
             this.PBGraph.TabStop = false;
             // 
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 572);
+            this.ClientSize = new System.Drawing.Size(1161, 618);
             this.Controls.Add(this.PBGraph);
             this.Controls.Add(this.btnDeSerialize);
             this.Controls.Add(this.btnShowValues);

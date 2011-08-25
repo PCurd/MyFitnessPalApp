@@ -12,6 +12,7 @@ namespace MyFitnessLibrary.Graphing
         List<int[]> datasets = new List<int[]>();
         string[] BottomLabels;
         Chart chart;
+        private int LeftRange = 0;
 
         public GoogleChartGraphCreator(List<int[]> datasets)
         {
@@ -19,21 +20,23 @@ namespace MyFitnessLibrary.Graphing
         }
 
 
-        public GoogleChartGraphCreator(List<int[]> datasets, string[] BottomLabels) :this(datasets)
+        public GoogleChartGraphCreator(List<int[]> datasets, string[] BottomLabels, int LeftRange) :this(datasets)
         {
             this.BottomLabels = BottomLabels;
+            this.LeftRange = LeftRange;
         }
 
         void CreateBarChart()
         {
-            int Width = 450;
-            chart = new BarChart(Width, 250, BarChartOrientation.Vertical, BarChartStyle.Stacked);
-            chart.SetTitle("Vertical Stacked");
+            int Width = 500;
+            chart = new BarChart(Width, 600, BarChartOrientation.Vertical, BarChartStyle.Stacked);
+            //chart.SetTitle("Vertical Stacked");
             ChartAxis BottomAxis = new ChartAxis(ChartAxisType.Bottom);
             ChartAxis LeftAxis = new ChartAxis(ChartAxisType.Left);
 
             //LeftAxis.SetRange(0, datasets[0].Max());
-            LeftAxis.SetRange(0, 4095);
+            if (LeftRange>0)
+                LeftAxis.SetRange(0, LeftRange);
 
             if (BottomLabels != null)
             {

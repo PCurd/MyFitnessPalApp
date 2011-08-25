@@ -22,6 +22,10 @@ namespace MyFitnessLibrary.Fitness
             }
         }
 
+        //public List<MyFitness> LastDays
+        //{
+        //    get{return Last(
+
         public List<MyFitness> Last(int count)
         {
             return Values.Where((x, y) => y > Values.Count - (count + 1)).ToList();

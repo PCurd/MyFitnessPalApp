@@ -6,9 +6,10 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MyFitnessLibrary.ExtensionMethods;
 using MyFitnessLibrary.Fitness;
-using MyFitnessLibrary.XML;
-using MyFitnessLibrary.Network;
+//using MyFitnessLibrary.XML;
+//using MyFitnessLibrary.Network;
 using MyFitnessLibrary.Graphing;
 using System.IO;
 
@@ -18,13 +19,13 @@ namespace MyFitnessPalApp
     {
         private string XMLOutFile = @"xmlout.xml";
 
-        private MyFitnessPalWrapper MyFitness;
-
+        private IMyFitnessPalWrapper MyFitness;
+        private IMyFitnessPalConfig MyFitnessPalConfig;
         public Form1()
         {
             InitializeComponent();
-
-            MyFitness = new MyFitnessPalWrapper(@"ConfigFile.xml", 14);
+            MyFitnessPalConfig = new MyFitnessPalConfigXMLGoogleChart(14);
+            MyFitness = MyFitnessPalConfig.MyFitnessPal;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,7 +55,7 @@ namespace MyFitnessPalApp
         private void button1_Click(object sender, EventArgs e)
         {
             textBox2.Text = "XML Serialisation Starting";
-            MyFitness.ExportXML(XMLOutFile);
+            MyFitness.Export(XMLOutFile);
         }
 
         private void btnUpdateValues_Click(object sender, EventArgs e)
@@ -66,17 +67,13 @@ namespace MyFitnessPalApp
         {
             UpdateForm();
 
-            //IGraphCreator Graph = new GoogleChartGraphCreator((new DataSetBuilder(MyFitness.MyFitnesses)).CaloriesComparison);
-            IGraphCreator Graph = new GoogleChartGraphCreator((new DataSetBuilder(MyFitness.MyFitnesses)).CaloriesComparison,(new DataSetBuilder(MyFitness.MyFitnesses)).DateLabels);
-
-            Graph.CreateChart(GraphType.Bar);
-            PBGraph.Image=Graph.GetImage(new GoogleChartGraphOptions());
+            PBGraph.Image = MyFitness.GetCaloriesComparisonBarGraph();
         }
 
         private void btnDeSerialize_Click(object sender, EventArgs e)
         {
             textBox2.Text = "XML DeSerialisation Starting";
-            MyFitness.ImportXML(XMLOutFile);
+            MyFitness.Import(XMLOutFile);
         }
     }
 }

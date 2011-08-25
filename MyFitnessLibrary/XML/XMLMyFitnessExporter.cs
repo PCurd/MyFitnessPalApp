@@ -9,7 +9,7 @@ using MyFitnessLibrary.Fitness;
 
 namespace MyFitnessLibrary.XML
 {
-    public class XMLMyFitnessExporter
+    public class XMLMyFitnessExporter : MyFitnessLibrary.XML.IMyFitnessExporter
     {
 
         private string _FileName;

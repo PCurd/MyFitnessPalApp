@@ -10,7 +10,7 @@ using MyFitnessLibrary.Fitness;
 namespace MyFitnessLibrary.XML
 {
 
-    public class XMLMyFitnessLoader
+    public class XMLMyFitnessLoader : MyFitnessLibrary.XML.IMyFitnessLoader
     {
         Login _login;
 
@@ -33,7 +33,7 @@ namespace MyFitnessLibrary.XML
 
         }
 
-        public List<MyFitnessXML> GetValues(XDocument xDoc)
+        private List<MyFitnessXML> GetValues(XDocument xDoc)
         {
 
             var Chart_DataL = from c in xDoc.Elements("chart").Elements("chart_data").Elements("row")
@@ -63,13 +63,8 @@ namespace MyFitnessLibrary.XML
             return XMLList;
 
         }
-        /// <summary>
-        /// Enter from outside class
-        /// </summary>
-        /// <param name="MyFitnessStat"></param>
-        /// <param name="MyFitnessList"></param>
-        /// <param name="NumberOfDays"></param>
-        public void GetValue(MyFitnessStatType MyFitnessStat, List<MyFitness> MyFitnessList, int NumberOfDays)
+       
+        private void GetValue(MyFitnessStatType MyFitnessStat, List<MyFitness> MyFitnessList, int NumberOfDays)
         {
             if ((NumberOfDays > (DateTime.IsLeapYear(DateTime.Now.Year) ? 366 : 365)) || (NumberOfDays < 1))
             {
@@ -84,7 +79,7 @@ namespace MyFitnessLibrary.XML
             ConvertXMLListToValue(MyFitnessList, ListXML, MyFitnessStat);
         }
 
-        public void ConvertXMLListToValue(List<MyFitness> MyFitnessList, List<MyFitnessXML> XMLList, MyFitnessStatType MyFitnessStat)
+        private void ConvertXMLListToValue(List<MyFitness> MyFitnessList, List<MyFitnessXML> XMLList, MyFitnessStatType MyFitnessStat)
         {
             foreach (var item in XMLList)
             {

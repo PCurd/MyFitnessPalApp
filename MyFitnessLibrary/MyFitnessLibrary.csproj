@@ -72,16 +72,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Fitness\MyFitnessPalWrapper.cs" />
+    <Compile Include="Fitness\IMyFitnessPalConfig.cs" />
+    <Compile Include="Fitness\IMyFitnessPalWrapper.cs" />
+    <Compile Include="ExtensionMethods\MyFitnessPalWrapperExtension.cs" />
+    <Compile Include="Fitness\MyFitnessPalConfig.cs" />
+    <Compile Include="Graphing\DataSetBuilder.cs" />
+    <Compile Include="Fitness\MyFitnessPalXMLWrapper.cs" />
     <Compile Include="Fitness\MyFitnessStatType.cs" />
     <Compile Include="Graphing\GoogleChartGraphCreator.cs" />
+    <Compile Include="Graphing\GoogleChartGraphWrapper.cs" />
     <Compile Include="Graphing\IGraphCreator.cs" />
+    <Compile Include="Graphing\IGraphWrapper.cs" />
     <Compile Include="Graphing\ImageDownloader.cs" />
     <Compile Include="Network\Login.cs" />
     <Compile Include="Fitness\MyFitness.cs" />
     <Compile Include="Fitness\MyFitnessList.cs" />
     <Compile Include="Network\LoginDetails.cs" />
     <Compile Include="Network\MyFitnessURL.cs" />
+    <Compile Include="XML\IMyFitnessExporter.cs" />
+    <Compile Include="XML\IMyFitnessImporter.cs" />
+    <Compile Include="XML\IMyFitnessLoader.cs" />
     <Compile Include="XML\LoadConfig.cs" />
     <Compile Include="XML\MyFitnessXML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

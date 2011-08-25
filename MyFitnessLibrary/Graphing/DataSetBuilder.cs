@@ -5,14 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 using MyFitnessLibrary.Fitness;
 using MyFitnessLibrary.XML;
 using MyFitnessLibrary.Network;
-using MyFitnessLibrary.Graphing;
 using System.IO;
 
-namespace MyFitnessPalApp
+namespace MyFitnessLibrary.Graphing
 {
     public class DataSetBuilder
     {
