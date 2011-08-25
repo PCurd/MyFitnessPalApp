@@ -28,29 +28,39 @@ namespace MyFitnessPalApp
         {
             get
             {
-                List<int[]> dataset;
-                int[] tempDataSet = new int[fitnessList.Values.Count];
-                for (int i = 0; i < fitnessList.Values.Count; i++)
-                {
-                    MyFitness myFitness = fitnessList.Values[i];
-                    tempDataSet[i] = (int)myFitness.GetFitnessValue(MyFitnessStatType.Calories);
-                }
-                dataset = new List<int[]>();
+                List<int[]> dataset = new List<int[]>();
 
-                dataset.Add(tempDataSet);
+                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Net_Calories));
 
-                tempDataSet = new int[fitnessList.Values.Count];
-
-                for (int i = 0; i < fitnessList.Values.Count; i++)
-                {
-                    MyFitness myFitness = fitnessList.Values[i];
-                    tempDataSet[i] = (int)myFitness.GetFitnessValue(MyFitnessStatType.Calories_Burned);
-                }
-
-                dataset.Add(tempDataSet);
+                dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories_Burned));
 
                 return dataset;
             }
+        }
+
+        private int[] GetDataSetByMyFitnessStatType(MyFitnessStatType myFitnessStatType)
+        {
+
+            int[] tempDataSet = new int[fitnessList.LastFortnight.Count];
+
+            for (int i = 0; i < fitnessList.LastFortnight.Count; i++)
+            {
+                MyFitness myFitness = fitnessList.LastFortnight[i];
+
+                tempDataSet[i] = (int)myFitness.GetFitnessValue(myFitnessStatType);
+            }
+            return tempDataSet;
+
+
+            //int[] tempDataSet = new int[fitnessList.Values.Count];
+
+            //for (int i = 0; i < fitnessList.Values.Count; i++)
+            //{
+            //    MyFitness myFitness = fitnessList.Values[i];
+
+            //    tempDataSet[i] = (int)myFitness.GetFitnessValue(myFitnessStatType);
+            //}
+            //return tempDataSet;
         }
     }
 }
