@@ -24,6 +24,13 @@ namespace MyFitnessPalApp
 
         }
 
+        public String[] DateLabels
+        {
+            get
+            {
+                return GetShortDates(fitnessList.LastFortnight);
+            }
+        }
         public List<int[]> CaloriesComparison
         {
             get
@@ -50,17 +57,19 @@ namespace MyFitnessPalApp
                 tempDataSet[i] = (int)myFitness.GetFitnessValue(myFitnessStatType);
             }
             return tempDataSet;
+        }
 
+        private String[] GetShortDates(List<MyFitness> Records)
+        {
+            string[] tempDataSet = new string[Records.Count];
 
-            //int[] tempDataSet = new int[fitnessList.Values.Count];
+            for (int i = 0; i < Records.Count; i++)
+            {
+                MyFitness myFitness = Records[i];
 
-            //for (int i = 0; i < fitnessList.Values.Count; i++)
-            //{
-            //    MyFitness myFitness = fitnessList.Values[i];
-
-            //    tempDataSet[i] = (int)myFitness.GetFitnessValue(myFitnessStatType);
-            //}
-            //return tempDataSet;
+                tempDataSet[i] = string.Format("{0:dd/MM/yy}",myFitness.Date);
+            }
+            return tempDataSet;
         }
     }
 }
