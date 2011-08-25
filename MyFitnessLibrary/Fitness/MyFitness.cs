@@ -68,6 +68,7 @@ namespace MyFitnessLibrary.Fitness
             {
                 sb.Append(string.Format("{0}: {1} ", MyFitnessURL.AddSpaces(Enum.GetName(typeof(MyFitnessStatType), MyFitnessStat)), GetFitnessValue(MyFitnessStat)));
             }
+            sb.Append(string.Format("Date: {0:dd/MM/yyyy} ",Date));
 
             return sb.ToString();
         }
