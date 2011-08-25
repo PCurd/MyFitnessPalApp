@@ -66,7 +66,9 @@ namespace MyFitnessPalApp
         {
             UpdateForm();
 
-            IGraphCreator Graph = new GoogleChartGraphCreator((new DataSetBuilder(MyFitness.MyFitnesses)).CaloriesComparison);
+            //IGraphCreator Graph = new GoogleChartGraphCreator((new DataSetBuilder(MyFitness.MyFitnesses)).CaloriesComparison);
+            IGraphCreator Graph = new GoogleChartGraphCreator((new DataSetBuilder(MyFitness.MyFitnesses)).CaloriesComparison,(new DataSetBuilder(MyFitness.MyFitnesses)).DateLabels);
+
             Graph.CreateChart(GraphType.Bar);
             PBGraph.Image=Graph.GetImage(new GoogleChartGraphOptions());
         }
