@@ -76,7 +76,7 @@
             // 
             // btnShowValues
             // 
-            this.btnShowValues.Location = new System.Drawing.Point(180, 306);
+            this.btnShowValues.Location = new System.Drawing.Point(89, 276);
             this.btnShowValues.Name = "btnShowValues";
             this.btnShowValues.Size = new System.Drawing.Size(75, 23);
             this.btnShowValues.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             // btnDeSerialize
             // 
-            this.btnDeSerialize.Location = new System.Drawing.Point(180, 336);
+            this.btnDeSerialize.Location = new System.Drawing.Point(89, 245);
             this.btnDeSerialize.Name = "btnDeSerialize";
             this.btnDeSerialize.Size = new System.Drawing.Size(75, 23);
             this.btnDeSerialize.TabIndex = 5;
@@ -96,9 +96,9 @@
             // 
             // PBGraph
             // 
-            this.PBGraph.Location = new System.Drawing.Point(28, 363);
+            this.PBGraph.Location = new System.Drawing.Point(28, 305);
             this.PBGraph.Name = "PBGraph";
-            this.PBGraph.Size = new System.Drawing.Size(726, 207);
+            this.PBGraph.Size = new System.Drawing.Size(450, 250);
             this.PBGraph.TabIndex = 6;
             this.PBGraph.TabStop = false;
             // 
@@ -106,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(779, 582);
+            this.ClientSize = new System.Drawing.Size(779, 572);
             this.Controls.Add(this.PBGraph);
             this.Controls.Add(this.btnDeSerialize);
             this.Controls.Add(this.btnShowValues);
