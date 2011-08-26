@@ -14,6 +14,7 @@ namespace MyFitnessLibrary.Fitness
 
         public LoadConfig config { get; set; }
         public LoginDetails loginDetails { get; set; }
+        public CookieDetails cookieDetails { get; set; }
         public Login login { get; set; }
         private IMyFitnessLoader Loader { get; set; }
         public int Days { get; private set; }
@@ -37,12 +38,19 @@ namespace MyFitnessLibrary.Fitness
 
             config = new LoadConfig(ConfigFileName);
             loginDetails = (LoginDetails)config.GetContents(typeof(LoginDetails));
-            login = new Login(loginDetails);
+            cookieDetails = (CookieDetails)config.BinaryDeserialize(typeof(CookieDetails));
+            login = new Login(loginDetails, cookieDetails);
             Loader = new XMLMyFitnessLoader(login);
             MyFitnesses = new MyFitnessList();
             this.graphWrapper = graphWrapper;
             this.Days = Days;
            
+        }
+
+        ~MyFitnessPalXMLWrapper()
+        {
+            config.BinarySerialize(typeof(CookieDetails), cookieDetails);
+
         }
 
         public void LoadValues()
@@ -52,6 +60,8 @@ namespace MyFitnessLibrary.Fitness
 
         public void Export(string FileName)
         {
+            //config.Serialize(typeof(LoginDetails), loginDetails);
+            
             MyFitnessExporter = new XMLMyFitnessExporter(MyFitnesses, FileName);
             MyFitnessExporter.Serialize();
         }

@@ -2,8 +2,6 @@
 
 Support for graphing
 
-Cache cookies
-
 DONE
 Update graphing to use scaling - need to provide data "out of 4095"
 
@@ -14,3 +12,5 @@ Fix bug when only one day - graph shows 0
 Exclude empty from CalorieComparison Graph
 
 Add field to MyFitness to indicate empty
+
+Cache cookies

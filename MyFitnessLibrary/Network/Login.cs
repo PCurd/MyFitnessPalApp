@@ -12,27 +12,49 @@ namespace MyFitnessLibrary.Network
     {
         //HttpWebRequest request;
         //HttpWebResponse response;
-        CookieContainer cookies;
+        //CookieContainer _Cookies;
+        LoginDetails Details;
+        CookieDetails cookieDetails;
+
+        //public CookieContainer Cookies
+        //{
+        //    get { return _Cookies; }
+        //    set { _Cookies = value; }
+        //}
         string Authenticity_Token;
 
-        public Login(LoginDetails Details)
+        public Login(LoginDetails Details, CookieDetails cookieDetails)
         {
-            Exception exc = null;
-            for (int i = 0; i < 3; i++)
+            this.Details = Details;
+            this.cookieDetails = cookieDetails;
+            DoLogin();
+        }
+
+        private void DoLogin()
+        {
+            if (cookieDetails.Cookies != null)
+                return;
+            else
             {
-                try
+                cookieDetails.Cookies = new CookieContainer();
+
+                Exception exc = null;
+                for (int i = 0; i < 3; i++)
                 {
-                    RunLogin(Details.Username, Details.Password);
-                    return;
+                    try
+                    {
+                        RunLogin(Details.Username, Details.Password);
+                        return;
+                    }
+                    catch (Exception ex)
+                    {
+                        //**TODO Exception handling
+                        exc = ex;
+                    }
                 }
-                catch (Exception ex)
-                {
-                    //**TODO Exception handling
-                    exc = ex;
-                }
+                if (exc != null)
+                    throw new OperationCanceledException(string.Format("Login Failed due to repeated 500 errors - {0}", exc.Message));
             }
-            if (exc != null)
-                throw new OperationCanceledException(string.Format("Login Failed due to repeated 500 errors - {0}", exc.Message));
         }
 
 
@@ -52,7 +74,8 @@ namespace MyFitnessLibrary.Network
             var request = (HttpWebRequest)WebRequest.Create(url);
 
             request.AllowAutoRedirect = false;
-            request.CookieContainer = new CookieContainer();
+           
+            request.CookieContainer = cookieDetails.Cookies;// new CookieContainer();
 
 
             //do GET first
@@ -70,7 +93,7 @@ namespace MyFitnessLibrary.Network
             Regex match = new Regex("input name=\"authenticity_token\" type=\"hidden\" value=\"(.*?)\"");
             Authenticity_Token = match.Match(result).Groups[1].Value;
 
-            cookies = request.CookieContainer;
+            cookieDetails.Cookies = request.CookieContainer;
 
 
 
@@ -79,7 +102,7 @@ namespace MyFitnessLibrary.Network
             request.AllowAutoRedirect = false;
 
 
-            request.CookieContainer = cookies;
+            request.CookieContainer = cookieDetails.Cookies;
             request.Method = "POST";
             request.ContentType = "application/x-www-form-urlencoded";
             string NewValue = string.Format("authenticity_token={2}&username={0}&password={1}&remember_me=1", Username, Password, Authenticity_Token);
@@ -97,7 +120,7 @@ namespace MyFitnessLibrary.Network
                 string strResponse = stIn.ReadToEnd();
                 stIn.Close();
 
-                cookies = request.CookieContainer;
+                cookieDetails.Cookies = request.CookieContainer;
             }
 
         }
@@ -106,7 +129,7 @@ namespace MyFitnessLibrary.Network
         {
             var request = (HttpWebRequest)WebRequest.Create(URL);
             request.AllowAutoRedirect = false;
-            request.CookieContainer = cookies;
+            request.CookieContainer = cookieDetails.Cookies;
             using (var response = (HttpWebResponse)request.GetResponse())
             {
                 string line = "";
