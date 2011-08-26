@@ -36,7 +36,20 @@ namespace MyFitnessLibrary.Fitness
         public double Calories_Burned { get; set; }
         public double Exercise_Minutes { get; set; }
         public double Net_Calories { get; set; }
-        public double Calories { get; set; }
+        private double _Calories;
+        public double Calories
+        {
+            get
+            {
+                return _Calories;
+            }
+            set
+            {
+                if (value>0)
+                    IsExcluded = false;
+                _Calories = value;
+            }
+        }
         public double Protein { get; set; }
         public double Carbs { get; set; }
         public double Fat { get; set; }
@@ -58,7 +71,7 @@ namespace MyFitnessLibrary.Fitness
         public MyFitness()
         {
             RawDate = "";
-
+            IsExcluded = true;
         }
 
         public override string ToString()
