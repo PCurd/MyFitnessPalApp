@@ -48,14 +48,15 @@ namespace MyFitnessLibrary.Graphing
                     if (i % 2 != 0)
                     {
                         //Odd
-                        BottomAxis.AddLabel(new ChartAxisLabel(label, (100.0f / bottomLabelsCount)*(i+0.5f)));
+                        BottomAxis2.AddLabel(new ChartAxisLabel(label, (100.0f / bottomLabelsCount)*(i+0.5f)));
                     }
                     else
                     {
-                        BottomAxis2.AddLabel(new ChartAxisLabel(label, (100.0f / bottomLabelsCount) * (i+0.5f)));
+                        BottomAxis.AddLabel(new ChartAxisLabel(label, (100.0f / bottomLabelsCount) * (i+0.5f)));
                     }
-
                 }
+                if (bottomLabelsCount == 1)
+                    BottomAxis2.AddLabel(new ChartAxisLabel(""));
 
                 chart.AddAxis(BottomAxis);
                 chart.AddAxis(BottomAxis2);
