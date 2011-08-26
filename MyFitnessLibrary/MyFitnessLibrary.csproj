@@ -75,11 +75,12 @@
     <Compile Include="Fitness\IMyFitnessPalConfig.cs" />
     <Compile Include="Fitness\IMyFitnessPalWrapper.cs" />
     <Compile Include="ExtensionMethods\MyFitnessPalWrapperExtension.cs" />
-    <Compile Include="Fitness\MyFitnessPalConfig.cs" />
+    <Compile Include="Fitness\MyFitnessPalConfigXMLGoogleChart.cs" />
     <Compile Include="Graphing\DataSetBuilder.cs" />
     <Compile Include="Fitness\MyFitnessPalXMLWrapper.cs" />
     <Compile Include="Fitness\MyFitnessStatType.cs" />
     <Compile Include="Graphing\GoogleChartGraphCreator.cs" />
+    <Compile Include="Graphing\GoogleChartGraphOptions.cs" />
     <Compile Include="Graphing\GoogleChartGraphWrapper.cs" />
     <Compile Include="Graphing\IGraphCreator.cs" />
     <Compile Include="Graphing\IGraphWrapper.cs" />

@@ -11,10 +11,10 @@ namespace MyFitnessLibrary.Graphing
     public class GoogleChartGraphWrapper : MyFitnessLibrary.Graphing.IGraphWrapper
     {
      
-        public IGraphCreator GetCaloriesComparisonGraph(GraphType graphType, MyFitnessList MyFitnesses)
+        public IGraphCreator GetCaloriesComparisonGraph(GraphType graphType, MyFitnessList MyFitnesses, int Days)
         {
 
-            DataSetBuilder dataSetBuilder = new DataSetBuilder(MyFitnesses);
+            DataSetBuilder dataSetBuilder = new DataSetBuilder(MyFitnesses,Days);
             int LeftRange;
             List<int[]> caloriesComparison = dataSetBuilder.CaloriesComparison(out LeftRange);
             IGraphCreator Graph = new GoogleChartGraphCreator(caloriesComparison, dataSetBuilder.DateLabels, LeftRange);

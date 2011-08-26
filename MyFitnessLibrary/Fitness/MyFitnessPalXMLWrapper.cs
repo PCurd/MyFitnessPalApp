@@ -41,6 +41,7 @@ namespace MyFitnessLibrary.Fitness
             Loader = new XMLMyFitnessLoader(login);
             MyFitnesses = new MyFitnessList();
             this.graphWrapper = graphWrapper;
+            this.Days = Days;
            
         }
 

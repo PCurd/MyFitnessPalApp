@@ -14,19 +14,25 @@ namespace MyFitnessLibrary.Graphing
 {
     public class DataSetBuilder
     {
+        private int Days;
         private MyFitnessList fitnessList;
+        private double DataSetScaleFactor = 4095.0;
 
-        public DataSetBuilder(MyFitnessList FitnessList)
+        public DataSetBuilder(MyFitnessList FitnessList, int Days)
         {
+            if ((Days > (DateTime.IsLeapYear(DateTime.Now.Year) ? 366 : 365)) || (Days < 1))
+            {
+                throw new ArgumentOutOfRangeException("Number of Days cannot exceed number of days this year or be less than 1");
+            }
             fitnessList = FitnessList;
-
+            this.Days = Days;
         }
 
         public String[] DateLabels
         {
             get
             {
-                return GetShortDates(fitnessList.LastFortnight);
+                return GetShortDates(fitnessList.Last(Days));
             }
         }
 
@@ -36,14 +42,14 @@ namespace MyFitnessLibrary.Graphing
 
             List<int[]> dataset = new List<int[]>();
 
-            dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Net_Calories, fitnessList.LastFortnight));
+            dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Net_Calories, fitnessList.Last(Days)));
 
-            dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories_Burned, fitnessList.LastFortnight));
+            dataset.Add(GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories_Burned, fitnessList.Last(Days)));
 
             //Calculate maximum Calories:
-            LeftRange = GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories, fitnessList.LastFortnight).Max();
+            LeftRange = GetDataSetByMyFitnessStatType(MyFitnessStatType.Calories, fitnessList.Last(Days)).Max();
             //4095.0/2800
-            return ScaleListOfArray(dataset,4095.0/LeftRange);
+            return ScaleListOfArray(dataset, DataSetScaleFactor / LeftRange);
 
         }
 

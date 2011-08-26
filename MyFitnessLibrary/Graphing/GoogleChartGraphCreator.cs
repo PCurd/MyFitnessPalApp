@@ -93,8 +93,4 @@ namespace MyFitnessLibrary.Graphing
 
 
     }
-
-    public class GoogleChartGraphOptions : IGraphOptions
-    {
-    }
 }
