@@ -10,7 +10,8 @@ Add field to MyFitness to indicate empty
 
 Exclude empty from CalorieComparison Graph
 
-Change dependency to move DataSetBuilder higher up, should not be concreted in graph creator
 
 DONE
 Update graphing to use scaling - need to provide data "out of 4095"
+
+Change dependency to move DataSetBuilder higher up, should not be concreted in graph creator
