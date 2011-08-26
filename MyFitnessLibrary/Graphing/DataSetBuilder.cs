@@ -12,7 +12,7 @@ using System.IO;
 
 namespace MyFitnessLibrary.Graphing
 {
-    public class DataSetBuilder
+    public class DataSetBuilder 
     {
         private int Days;
         private MyFitnessList fitnessList;

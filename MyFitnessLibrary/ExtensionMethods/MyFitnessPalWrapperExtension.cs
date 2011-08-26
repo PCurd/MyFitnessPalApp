@@ -14,7 +14,9 @@ namespace MyFitnessLibrary.ExtensionMethods
     {
         public static Image GetCaloriesComparisonBarGraph(this IMyFitnessPalWrapper wrapper)
         {
-            return wrapper.Graph.GetCaloriesComparisonGraph(GraphType.Bar, wrapper.MyFitnesses, wrapper.Days).GetImage(wrapper.Graph.DefaultGraphOptions);
+            DataSetBuilder dataSetBuilder = new DataSetBuilder(wrapper.MyFitnesses, wrapper.Days);
+            
+            return wrapper.Graph.GetCaloriesComparisonGraph(GraphType.Bar, wrapper.MyFitnesses, dataSetBuilder, wrapper.Days).GetImage(wrapper.Graph.DefaultGraphOptions);
         }
     }
 }
