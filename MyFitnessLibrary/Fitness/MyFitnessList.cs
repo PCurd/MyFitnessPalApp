@@ -28,7 +28,8 @@ namespace MyFitnessLibrary.Fitness
 
         public List<MyFitness> Last(int count)
         {
-            return Values.Where((x, y) => y > Values.Count - (count + 1)).ToList();
+            IEnumerable<MyFitness> valuesNonExcluded = Values.Where(x => !x.IsExcluded);
+            return valuesNonExcluded.Where((x, y) => y > valuesNonExcluded.Count() - (count + 1)).ToList();
         }
     }
 }
